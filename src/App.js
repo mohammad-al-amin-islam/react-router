@@ -1,6 +1,8 @@
-import { Outlet, Route, Routes } from 'react-router-dom';
+import { Route, Routes } from 'react-router-dom';
 import './App.css';
 import About from './components/About/About';
+import Countries from './components/Countries/Countries';
+import CountryDetails from './components/CountryDetails/CountryDetails';
 import FriendDetail from './components/FriendDetail/FriendDetail';
 import Friends from './components/Friends/Friends';
 import Header from './components/Header/Header';
@@ -24,6 +26,8 @@ function App() {
             element={<PostDetail></PostDetail>}
           ></Route>
         </Route>
+        <Route path='/countries' element={<Countries></Countries>}></Route>
+        <Route path='/countries/:nameCountries' element={<CountryDetails></CountryDetails>}></Route>
         <Route path='about' element={<About></About>}></Route>
         <Route path='*' element={<NotFound></NotFound>}></Route>
       </Routes>
